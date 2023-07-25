@@ -1,6 +1,6 @@
 pipeline {
     agent { label 'MAVEN_JDK8' }
-    triggers { pollSCM(* * * * *) }
+    triggers { pollSCM('* * * * *') }
     tools {
         jdk 'JDK_8'
     }
