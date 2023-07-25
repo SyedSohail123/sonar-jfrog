@@ -18,11 +18,11 @@ pipeline {
                } 
             }
         }
-        stage('Publish artifacts to Jfrog') {
-            steps {
+        // stage('Publish artifacts to Jfrog') {
+        //     steps {
 
-            }
-        }
+        //     }
+        // }
         stage('Archiving the artifacts & publishing test results') {
             steps {
                 archiveArtifacts onlyIfSuccessful: true,
