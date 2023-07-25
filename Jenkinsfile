@@ -18,6 +18,12 @@ pipeline {
         //        } 
         //     }
         // }
+        stage('version') {
+            steps {
+                sh 'java -version'
+                sh 'mvn --version' 
+            }
+        }
         stage('Publish artifacts to Jfrog') {
             steps {
                 rtMavenDeployer (
