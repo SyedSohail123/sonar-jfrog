@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('VCS') {
             steps {
-                git url: '',
+                git url: 'https://github.com/SyedSohail123/sonar-jfrog.git',
                     branch: 'master'
             }
         }
