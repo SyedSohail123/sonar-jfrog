@@ -22,5 +22,12 @@ pipeline {
 
             }
         }
+        stage('Archiving the artifacts & publishing test results') {
+            steps {
+                archiveArtifacts onlyIfSuccessful: true,
+                            artifacts: '**/target/*.war'
+                junit testResults: '**/surefire-reports/TEST-*.xml' 
+            }
+        }
     }
 }
